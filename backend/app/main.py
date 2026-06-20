@@ -24,6 +24,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origin_list,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -33,5 +34,8 @@ app.include_router(router)
 
 
 @app.get("/health")
-def health_check() -> dict[str, str]:
-    return {"status": "healthy"}
+def health_check() -> dict[str, str | list[str]]:
+    return {
+        "status": "healthy",
+        "cors_origins": settings.cors_origin_list,
+    }
