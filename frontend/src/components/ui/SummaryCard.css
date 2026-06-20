@@ -1,0 +1,39 @@
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: white;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-dialog);
+  transition: box-shadow 200ms ease;
+}
+
+.summary-card:hover {
+  box-shadow: var(--ui-shadow-sm);
+}
+
+.summary-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--ui-color-surface-sidebar);
+  color: var(--ui-color-accent);
+  flex-shrink: 0;
+}
+
+.summary-card-title {
+  font-size: 14px;
+  color: var(--ui-color-text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.summary-card-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ui-color-text);
+}

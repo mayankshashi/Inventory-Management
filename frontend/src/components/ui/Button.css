@@ -1,0 +1,63 @@
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--ui-size-control-default);
+  min-width: 92px;
+  padding: 0 20px;
+  border-radius: var(--ui-radius-pill);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+  border: none;
+  white-space: nowrap;
+}
+
+.ui-btn-compact {
+  height: var(--ui-size-control-compact);
+  min-width: auto;
+  padding: 0 16px;
+}
+
+.ui-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--ui-focus-ring);
+}
+
+.ui-btn-primary {
+  background: var(--ui-color-primary);
+  color: white;
+}
+
+.ui-btn-primary:hover:not(:disabled) {
+  background: var(--ui-color-primary-hover);
+}
+
+.ui-btn-outline {
+  background: white;
+  border: 1px solid var(--ui-color-primary);
+  color: var(--ui-color-primary);
+}
+
+.ui-btn-outline:hover:not(:disabled) {
+  background: #f0fdf9;
+}
+
+.ui-btn-neutral {
+  background: white;
+  border: 1px solid var(--ui-color-border);
+  color: var(--ui-color-text-secondary);
+  box-shadow: var(--ui-shadow-sm);
+}
+
+.ui-btn-neutral:hover:not(:disabled) {
+  border-color: var(--ui-color-primary);
+  color: var(--ui-color-primary);
+}

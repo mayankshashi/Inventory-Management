@@ -1,0 +1,28 @@
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-main {
+  min-height: 100vh;
+  transition: margin-left 200ms ease;
+}
+
+.app-main-expanded {
+  margin-left: var(--ui-size-sidebar-expanded);
+}
+
+.app-main-collapsed {
+  margin-left: var(--ui-size-sidebar-collapsed);
+}
+
+.app-content {
+  padding-top: var(--ui-size-topnav-height);
+  min-height: 100vh;
+}
+
+@media (max-width: 1023px) {
+  .app-main-expanded,
+  .app-main-collapsed {
+    margin-left: 0;
+  }
+}
