@@ -1,0 +1,121 @@
+.ui-select-wrap {
+  position: relative;
+}
+
+.ui-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: var(--ui-size-control-default);
+  padding: 8px 12px;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-pill);
+  background: white;
+  color: var(--ui-color-text);
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+  text-align: left;
+  font-size: 14px;
+}
+
+.ui-select-trigger:hover:not(:disabled) {
+  border-color: var(--ui-color-primary);
+}
+
+.ui-select-trigger:focus-visible,
+.ui-select-trigger.ui-select-open {
+  outline: none;
+  border-color: var(--ui-color-primary);
+  box-shadow: var(--ui-focus-ring);
+}
+
+.ui-select-trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-select-value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ui-select-placeholder .ui-select-value {
+  color: var(--ui-color-text-muted);
+}
+
+.ui-select-chevron {
+  flex-shrink: 0;
+  color: var(--ui-color-text-muted);
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.ui-select-open .ui-select-chevron {
+  transform: rotate(180deg);
+  color: var(--ui-color-primary);
+}
+
+.ui-select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: white;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-dialog);
+  box-shadow: var(--ui-shadow-lg);
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.ui-select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--ui-color-text);
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.ui-select-option:hover,
+.ui-select-option-highlighted {
+  background: #f0fdf9;
+  color: var(--ui-color-primary);
+}
+
+.ui-select-option-selected {
+  background: rgba(4, 193, 162, 0.12);
+  color: var(--ui-color-text-emphasis);
+  font-weight: 500;
+}
+
+.ui-select-option-selected:hover,
+.ui-select-option-selected.ui-select-option-highlighted {
+  background: rgba(4, 193, 162, 0.18);
+  color: var(--ui-color-primary);
+}
+
+.ui-select-option-check {
+  flex-shrink: 0;
+  color: var(--ui-color-primary);
+}
+
+.ui-select-hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
